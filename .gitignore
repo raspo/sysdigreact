@@ -1,0 +1,7 @@
+.DS_Store
+*.log
+*notes.md
+node_modules
+coverage/
+dist/
+.npmrc

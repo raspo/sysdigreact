@@ -1,0 +1,141 @@
+.btn {
+  background: #FEFEFE;
+  border: $border;
+  border-radius: $border-radius;
+  color: $text-color;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: 500;
+  height: 32px;
+  line-height: 30px;
+  padding: 0 $spacing;
+  text-align: center;
+
+  &:hover {
+    background: #FFF;
+    box-shadow: inset 0 -1px lighten($border-color, 10%);
+  }
+
+  &:active,
+  &.btn--active {
+    background: darken(#FEFEFE, 1%);
+    border-color: darken($border-color, 3%);
+    box-shadow: inset 0 1px 2px darken($border-color, 3%), 0 0 1px rgba(255,255,255,0.2);
+    transform: translateY(1px);
+  }
+
+  &.btn--disabled {
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      background: $whiteish !important;
+      border-color: $border-color;
+      box-shadow: none;
+      color: #B2B2B2 !important;
+      cursor: not-allowed;
+      text-shadow: none !important;
+    }
+  }
+
+  &.btn--right {
+    float: right;
+    margin-left: 15px;
+  }
+
+  b {
+    font-weight: 500;
+    vertical-align: middle;
+  }
+
+  .icon {
+    font-size: 16px;
+    padding: 0 0 0 4px;
+    vertical-align: middle;
+  }
+}
+
+.btn--large {
+  font-size: 14px;
+  height: 42px;
+  line-height: 40px;
+}
+
+.btn--wide {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.btn--fluid {
+  width: 100%;
+}
+
+@mixin btn-variation(
+    $bg,
+    $border,
+    $bg-hover,
+    $bg-active: darken($bg, 5%),
+    $border-active: darken($border, 5%)
+  ) {
+  background: $bg;
+  border-color: $border;
+  color: #FFF;
+  text-shadow: 0 1px 0 $border;
+
+  &:hover,
+  &:focus {
+    background: $bg-hover;
+    box-shadow: inset 0 -1px $border;
+  }
+
+  &:active,
+  &.btn--active {
+    background: $bg-active;
+    border-color: $border-active;
+    box-shadow: inset 0 1px 2px $border-active, 0 0 1px rgba(255,255,255,0.2);
+  }
+}
+
+.btn--brand {
+  @include btn-variation(
+    $color-brand,
+    darken($color-brand, 13%),
+    lighten($color-brand, 5%),
+    darken($color-brand, 5%),
+    darken($color-brand, 17%)
+  );
+}
+
+.btn--blue {
+  @include btn-variation(
+    $color-blue,
+    darken($color-blue, 10%),
+    lighten($color-blue, 10%)
+  );
+}
+
+.btn--green {
+  @include btn-variation(
+    $color-green,
+    darken($color-green, 13%),
+    lighten($color-green, 5%),
+    darken($color-green, 5%),
+    darken($color-green, 17%)
+  );
+}
+
+.btn--red {
+  @include btn-variation(
+    $color-red,
+    darken($color-red, 13%),
+    lighten($color-red, 5%),
+    darken($color-red, 5%),
+    darken($color-red, 17%)
+  );
+}
+
+.btn-container {
+  padding: $spacing;
+}

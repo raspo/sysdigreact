@@ -1,0 +1,63 @@
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, form, fieldset, legend, input, textarea, img, blockquote, iframe, code, pre {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    font-size: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+article, aside, details, figcaption, figure, footer, header, nav, section, main, summary {
+    display: block;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+img {
+    display: block;
+}
+
+a,
+a:hover,
+a:active,
+a:focus {
+    outline: none;
+    text-decoration: none;
+}
+
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+textarea{
+  resize: none;
+  overflow: auto;
+}
+
+button:focus,
+button:active,
+input:focus,
+input:active,
+select:focus,
+select:active,
+textarea:focus {
+  outline: none;
+}

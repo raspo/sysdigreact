@@ -1,0 +1,77 @@
+.hidden {
+  display: none !important;
+}
+
+.cf {
+  zoom: 1;
+
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.clear {
+  clear: both;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.align-r {
+  text-align: right;
+}
+
+.align-l {
+  text-align-last: auto;
+}
+
+.h-pad {
+  padding-left: $spacing;
+  padding-right: $spacing;
+}
+
+.v-pad {
+  padding-bottom: $spacing;
+  padding-top: $spacing;
+}
+
+.pill {
+  border: 1px solid transparent;
+  border-radius: 2px;
+  color: #FFF;
+  display: inline-block;
+  font-size: 10px;
+  line-height: 10px;
+  margin: 0 0 $spacing/2;
+  padding: 2px 8px;
+  text-transform: uppercase;
+
+  &.pill--bus {
+      background: $color-blue;
+      border-color: $color-blue-darker;
+  }
+
+  &.pill--mail {
+      background: $color-red;
+      border-color: $color-red-darker;
+  }
+
+  &.pill--other {
+      background: $color-green;
+      border-color: $color-green-darker;
+  }
+}
+
+.TEMP_HIDE {
+  display: none !important;
+}

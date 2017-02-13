@@ -1,0 +1,101 @@
+// colors
+
+$border-color: #DDDDDD;
+$border-color-darker: #C3C3C3;
+$border-color-softer: #EDEDED;
+
+$whiteish: #FDFDFD;
+$alabaster: #FCFCFC;
+$concrete: #F7F7F7;
+$whitesmoke: #F5F5F5;
+$gallery: #EAEAEA;
+$iron: #D8D8D8;
+
+$text-color: #6F6F6F;
+$text-color-darker: #585858;
+$text-color-lighter: #919191;
+
+$color-brand: #258B8F;
+$color-green: #98CF69;
+$color-green-darker: #2E7D32;
+$color-orange: #E59369;
+$color-blue: #419BF9;
+$color-blue-darker: #4F8EF7;
+$color-red: #CB6767;
+$color-red-darker: #C62828;
+
+$error-color: #DD4B39;
+$error-color-darker: #902618;
+$error-bg-color: rgba(#DD4B39, 0.4);
+
+
+// measurements
+
+$font-size: 13px;
+
+$border-radius: 3px;
+$header-height: 50px;
+
+$spacing: 12px;
+
+
+// transitions
+
+$animation-duration: 0.2s;
+$animation-easing: ease-in-out;
+
+@mixin animate-all() {
+  transition: all $animation-duration $animation-easing;
+}
+
+@mixin animate-bg() {
+  transition: background $animation-duration $animation-easing;
+}
+
+@mixin animate-color() {
+  transition: color $animation-duration $animation-easing;
+}
+
+@mixin animate-border() {
+  transition: border $animation-duration $animation-easing;
+}
+
+@mixin animate-bg-and-color() {
+  transition: background $animation-duration $animation-easing, color $animation-duration $animation-easing;
+}
+
+// misc
+
+$border: 1px solid $border-color;
+$font-family: Roboto, Helvetica, Open Sans, arial, 'sans-serif';
+$box-shadow: 0 2px 2px rgba(0, 0, 0, 0.02);
+$box-shadow-darker: 0 2px 2px rgba(0, 0, 0, 0.06);
+$inset-shadow: inset 0px 1px 5px 0px $iron;
+
+
+// break-points
+
+$break-small: 770px;
+$break-medium: 860px;
+$break-large: 1200px;
+
+@mixin respond-to($media) {
+  @if $media == small {
+    @media only screen and (min-width: $break-small) { @content; }
+  }
+  @else if $media == medium {
+    @media only screen and (min-width: $break-medium) { @content; }
+  }
+  @else if $media == large {
+    @media only screen and (min-width: $break-large) { @content; }
+  }
+}
+
+@mixin retina() {
+  @media only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 192dpi),
+  only screen and (min-resolution: 2dppx),
+  only screen and (min-device-pixel-ratio: 2) {
+    @content;
+  }
+}

@@ -1,0 +1,36 @@
+$loader-color: #258B8F;
+
+.loader {
+  padding: 70px 0;
+}
+
+.css3loader {
+  $animationDuration: 1.4s;
+  $delayRange: 0.32s;
+  $size: 40px;
+
+  margin: 0 auto;
+  text-align: center;
+  width: $size * 3;
+
+  div {
+    animation: css3loader $animationDuration ease-in-out 0s infinite both;
+    background-color: $loader-color;
+    border-radius: 100%;
+    display: inline-block;
+    height: $size / 2;
+    margin: 0 3px;
+    width: $size / 2;
+  }
+
+  .css3loader-bounce1 { animation-delay: -$delayRange; }
+  .css3loader-bounce2 { animation-delay: -$delayRange / 2; }
+}
+
+@keyframes css3loader {
+  0%, 80%, 100% {
+    transform: scale(0);
+  } 40% {
+    transform: scale(1.0);
+  }
+}

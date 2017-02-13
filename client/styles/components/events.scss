@@ -1,0 +1,34 @@
+.events-summary {
+  line-height: 32px;
+  position: relative;
+
+  p {
+    font-size: 17px;
+    line-height: 32px;
+  }
+
+  em {
+    font-style: italic;
+    font-size: 15px;
+  }
+
+  button {
+    position: absolute;
+    right: $spacing;
+    top: $spacing;
+  }
+}
+
+.events-filter {
+  display: flex;
+}
+
+.events-filter__label {
+  flex: 0 0 250px;
+  font-size: 15px;
+  line-height: 32px;
+}
+
+.events-filter__select {
+  flex: 1;
+}

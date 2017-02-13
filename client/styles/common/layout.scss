@@ -1,0 +1,31 @@
+.applayout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .appheader {
+    background: white;
+    border-bottom: 1px solid $border-color;
+    flex: 0 0 60px;
+    height: 60px;
+    line-height: 40px;
+    padding: 10px $spacing;
+  }
+
+  .appcontent {
+    flex: 1;
+  }
+}
+
+.logo {
+  background: url(../img/logo.png) no-repeat;
+  background-size: auto 40px;
+  color: $text-color-darker;
+  font-size: 18px;
+  text-indent: -9999px;
+}
+
+.container {
+  margin: 0 auto;
+  width: 960px;
+}
