@@ -3,5 +3,6 @@
 *notes.md
 node_modules
 coverage/
-dist/
+dist/css
+dist/js
 .npmrc

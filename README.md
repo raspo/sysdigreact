@@ -1,5 +1,12 @@
 ## Instructions
 
+To build the project (requires nodejs and npm):
+
+```
+npm i
+npm run build
+```
+
 To run the precompiled code, simply enter the `dist` folder and start a web server (in my example I am using Python).
 
 ```
@@ -8,8 +15,7 @@ python -m SimpleHTTPServer 8000
 open http://localhost:8000
 ```
 
-
-To build the development environment (requires nodejs and npm)
+To build the development environment:
 
 ```
 npm i

@@ -1,3 +1,4 @@
+import fetch from 'isomorphic-fetch';
 import {
   EVENTS_FETCH_START,
   EVENTS_FETCH_SUCCESS,
@@ -14,7 +15,6 @@ export function fetchEvents() {
 
     fetch('https://app-staging.sysdigcloud.com/api/events', {
       method: 'GET',
-      mode: 'CORS',
       headers: {
         Authorization: 'Bearer 8aef9517-3070-4090-b55e-83296cee8cd1',
         'Content-Type': 'application/json',
